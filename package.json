@@ -1,0 +1,19 @@
+{
+  "name": "chat",
+  "version": "0.1.5",
+  "description": "chat in nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perseu912/chat.git"
+  },
+  "author": "Reinan Bezerra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perseu912/chat/issues"
+  },
+  "homepage": "https://github.com/perseu912/chat#readme"
+}
