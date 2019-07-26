@@ -3,10 +3,9 @@ var express = require("express")
 var port = process.env.PORT || 8182
 var app = express()
 
-app.get('/index/:msg', (req, res) => {
+app.get('/', (req, res) => {
 	res.status(200)
-	msg = req.params.msg
-	res.send(msg)
+	res.send(`tente outra vez`)
 	console.log(req.headers)
 })
 
