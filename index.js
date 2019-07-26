@@ -4,10 +4,11 @@ const path = require("path")
 
 const port = process.env.PORT || 5000
 const app = express()
-const index = path.join(__dirname+"/public")
+const index = path.join(__dirname, "public")
 
 app.use(express.static(index))
+const server = http.createServer(app)
 
-app.listen(port, () => {
+server.listen(port, () => {
 	console.log(`online na porta ${port}`)
 })
