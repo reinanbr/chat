@@ -1,13 +1,12 @@
-var express = require("express")
+const express = require("express")
+const http = require("http")
+const path = require("path")
 
-var port = process.env.PORT || 8182
-var app = express()
+const port = process.env.PORT || 5000
+const app = express()
+const index = path.join(__dirname+"/public")
 
-app.get('/', (req, res) => {
-	res.status(200)
-	res.send(`tente outra vez`)
-	console.log(req.headers)
-})
+app.use(express.static(index))
 
 app.listen(port, () => {
 	console.log(`online na porta ${port}`)
