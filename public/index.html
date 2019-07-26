@@ -1,1 +1,42 @@
-<h1> vai mizeraaaaaA </h1>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+	h1{
+		background-color: 'DeepSkyBlue';
+		margin:0;
+		}
+body {
+	margin-left: 10px;
+	font-size: 200%;
+	width: 90%;
+	height: 70vh;
+	}
+.chat {
+	width: 90%;
+	height: 60%;
+	margin:0;
+	background-color: 'LightSteelBlue';
+	overflow-y : scroll;
+	}
+input {
+	font-size: 200%;
+	}
+button{
+	font-size: 200%;
+	}
+</style>
+	</head>
+<body>
+<h1> chat </h1>
+<h3 id="uel"> entre na sala </h3>
+<p id="on"></p>
+<hr>
+<div class="chat" id="chat"></div>
+<input placeholder="digite seu apelido" id="msg"><button id="login">entrar</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script src="socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
