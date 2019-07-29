@@ -2,6 +2,11 @@
      var user = {}
 	var socket = io()
 	
+	socket.on("usersCount", (users) => {
+		count = users.length
+		$("#count").text(`usuarios online(${count})`)
+	})
+	
 	$("#chat").hide()
 	login = () => {
 		user.name = $("#msg").val()
@@ -43,15 +48,15 @@
 	}
 	
 	socket.on("users", (user) => {
-		$("#chat").append(`<small>${user.name} entrou na sala</small>`)
+		$("#chat").append(`<p><small>${user.name} entrou na sala</small></p>`)
 	})
 	
 	socket.on("user exit", (user) =>  {
-		$("#chat").append(`<small>${user.name} saiu da sala </small>`)
+		$("#chat").append(`<p><small>${user.name} saiu da sala </small></p>`)
 	})
 	
 	socket.on("chat", (user) => {
-		$("#chat").append(`<p>${user.name}: ${user.msg}</p>`)
+		$("#chat").append(`<p>${user.msgEnv}</p>`)
 		   $("#chat")
         .animate({scrollTop: $("#chat")[0]
         .scrollHeight}, 500);
