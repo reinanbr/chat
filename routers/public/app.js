@@ -25,12 +25,9 @@
 		})
 	}
 			
-	
 	socket.on('connect', () => {
 		$("#on").text("você está conectado.")
 	})
-	
-	
 	
 	$("#msg").keypress(function(e) {
 		if(e.which == 13){
