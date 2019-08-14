@@ -39,22 +39,21 @@ ip = 'localhost'
 const myIp = ip
 //console.log(myIp)
 
+//const log = require(`./logger`)
+
 const log = (l) => {
 	text =  datta()+': '+l+'\n'
 	if(fs.existsSync('public/')){
 		fs.writeFile('./public/log', text, {enconding:'utf-8', flag:'a+'}, (err) => {
-		  //console.log(err)
 	  }) 
 	 }
   else{
         fs.writeFile('./public/log', text, {enconding:'utf-8', flag:'a+'}, (err) => {
-		 //console.log(err)
     })
     }
 
     console.log(text)
 }
-// console.log(text);
 
 
 time = {

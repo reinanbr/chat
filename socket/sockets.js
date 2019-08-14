@@ -29,6 +29,11 @@ io.on("connection", (socket) => {
 		user.msgEnv = `${sys.datta()}: ${user.name} => ${user.msg}`
 		sys.log(`${user.name}: ${user.msg}`)
 		io.emit("chat", user)
+
+        if(user.msg === "sair"){
+           socket.disconnect(true)
+           sys.log(`${user.name} foi expulso`)
+        }
 	})
 	
 	io.emit("usersCount", users)

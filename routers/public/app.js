@@ -62,6 +62,7 @@
 	
 	socket.on("disconnect", () => {
 		$("#on").text("você está desconectado.")
+         $("#inp").text('vc foi desconectado')
 	})
 		
 	
